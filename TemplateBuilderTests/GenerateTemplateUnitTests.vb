@@ -25,28 +25,35 @@ Public Class GenerateTemplateUnitTests
     <TestMethod()> _
     <ExpectedException(GetType(System.Exception))> _
     Public Sub Throw_Exception_If_Input_Parameters_Contains_Invalid_Field_Parameter()
-        Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + FORM_FIELD_INVALID_PARAMETER)
+        Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + INVALID_FORM_FIELD_PARAMETER)
     End Sub
 
     <TestMethod()>
     Public Sub Display_Generated_Template_Code_When_Parameters_Field_With_Type_Varchar_Input()
         GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
 
-        Assert.AreEqual(GENERATED_OUTPUT, EXPECTED_GENERATED_OUTPUT)
+        Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
     End Sub
 
     <TestMethod()>
     Public Sub Display_Generated_Template_Code_When_Parameters_Field_With_Type_Int_Input()
         GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
 
-        Assert.AreEqual(GENERATED_OUTPUT, EXPECTED_GENERATED_OUTPUT)
+        Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
     End Sub
 
     <TestMethod()>
-    Public Sub Display_Generated_Template_Code_When_Parameters_Field_With_Type_Date_Input()
+    Public Sub Generate_Template_Code_When_Parameters_Field_With_Type_Date_Input()
         GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
 
-        Assert.AreEqual(GENERATED_OUTPUT, EXPECTED_GENERATED_OUTPUT)
+        Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
+    End Sub
+
+    <TestMethod()>
+    Public Sub Generate_HTML_Template_Code_When_Parameters_Input()
+        GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
+
+        Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
     End Sub
 
 
@@ -60,9 +67,9 @@ Public Class GenerateTemplateUnitTests
     Dim NO_PARAMETERS = String.Empty
     Dim FORM_TEMPLATE_PARAMETER = "TemplateName "
     Dim FORM_NAME_PARAMETER = "FormName "
-    Dim FORM_FIELD_INVALID_PARAMETER = "Field:Type "
+    Dim INVALID_FORM_FIELD_PARAMETER = "Field:Type "
     Dim INPUT_PARAMETERS = "TemplateName FormName Field1:VaRcHar Field2:InT Field3:DatE"
-    Dim EXPECTED_GENERATED_OUTPUT = "generated output"
+    Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
     Dim GENERATED_OUTPUT As String = String.Empty
 
 

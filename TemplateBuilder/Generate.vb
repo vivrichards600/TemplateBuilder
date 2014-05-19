@@ -1,4 +1,5 @@
 ﻿Public Class Generate
+
     ''' <summary>
     ''' Create a template based on input parameters
     ''' </summary>
@@ -11,7 +12,7 @@
 
         CheckTypes(FieldParameters(inputParameters)) 'fail if user field FieldParameters do not have valid field types
 
-        Return "generated output"
+        Return "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
 
     End Function
 
