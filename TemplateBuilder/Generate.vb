@@ -11,16 +11,9 @@
 
         CheckTypes(FieldParameters(inputParameters))
         CheckSize(FieldParameters(inputParameters))
-        'fail if user field FieldParameters do not have valid field types
-
-
-
-
 
         Return "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
-
     End Function
-
 
     ''' <summary>
     ''' Obtain list of field parameters
@@ -46,7 +39,6 @@
     ''' <summary>
     ''' Check field parameter contains a valid size if it's specified
     ''' </summary>
-    ''' <param name="inputParameters"></param>
     ''' <remarks></remarks>
     Private Sub CheckSize(ByVal parameters As List(Of String))
         parameters.ForEach(Sub(parameter)
@@ -61,8 +53,5 @@
                                If parameter.Contains("(") = False And parameter.Contains(")") = True Then Throw New Exception("found a closing bracket for field size but no opening bracket")
                            End Sub)
     End Sub
-
-
-
 
 End Class

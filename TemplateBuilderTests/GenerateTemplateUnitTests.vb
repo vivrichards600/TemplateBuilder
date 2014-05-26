@@ -75,5 +75,4 @@ Public Class GenerateTemplateUnitTests
     Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
     Dim GENERATED_OUTPUT As String = String.Empty
 
-
 End Class
