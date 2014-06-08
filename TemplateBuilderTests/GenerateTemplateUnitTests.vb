@@ -35,19 +35,19 @@ Public Class GenerateTemplateUnitTests
     End Sub
 
     <TestMethod()>
-      <ExpectedException(GetType(System.Exception))> _
-    Public Sub Throw_Exception_When_Parameters_Field_Contains_Field_Size_Without_Closing_Bracket()
-        Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar(200")
-    End Sub
-
-    <TestMethod()>
-   <ExpectedException(GetType(System.Exception))> _
+    <ExpectedException(GetType(System.Exception))> _
     Public Sub Throw_Exception_When_Parameters_Field_Contains_Field_Size_Without_Opening_Bracket()
         Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar200)")
     End Sub
 
     <TestMethod()>
-   <ExpectedException(GetType(System.Exception))> _
+    <ExpectedException(GetType(System.Exception))> _
+    Public Sub Throw_Exception_When_Parameters_Field_Contains_Field_Size_Without_Closing_Bracket()
+        Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar(200")
+    End Sub
+
+    <TestMethod()>
+    <ExpectedException(GetType(System.Exception))> _
     Public Sub Throw_Exception_When_Parameters_Field_Contains_Field_Size_Opening_And_Closing_Brackets_But_No_Size()
         Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar()")
     End Sub
@@ -67,9 +67,9 @@ Public Class GenerateTemplateUnitTests
     End Sub
 
     Dim NO_PARAMETERS = String.Empty
-    Dim FORM_TEMPLATE_PARAMETER = "TemplateName "
-    Dim FORM_NAME_PARAMETER = "FormName "
-    Dim FORM_FIELD_INVALID_PARAMETER = "Field:Type "
+    Dim FORM_TEMPLATE_PARAMETER = "TemplateName"
+    Dim FORM_NAME_PARAMETER = " FormName"
+    Dim FORM_FIELD_INVALID_PARAMETER = " Field:Type"
     Dim INPUT_PARAMETERS = "TemplateName FormName Field1:VaRcHar Field2:InT Field3:DatE"
     Dim INVALID_INPUT_PARAMETERS = "TemplateName FormName Field1:SomeInvalidType"
     Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"

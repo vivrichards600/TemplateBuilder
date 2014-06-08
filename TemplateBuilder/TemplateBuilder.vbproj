@@ -87,6 +87,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TemplateBuilderForm.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -115,6 +116,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TemplateBuilderForm.aspx.designer.vb">
+      <DependentUpon>TemplateBuilderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateBuilderForm.aspx.vb">
+      <DependentUpon>TemplateBuilderForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

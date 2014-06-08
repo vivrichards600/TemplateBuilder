@@ -5,9 +5,10 @@
     ''' <param name="inputParameters"></param>
     ''' <returns>Creates Web Form, Web Form Code, Web Form tests, SQL Scripts</returns>
     ''' <remarks>EXAMPLE USAGE: TemplateName FormName Field1:Varchar Field2:Int Field3:Date</remarks>
-    Public Function Template(inputParameters As String) As String
+    Public Shared Function Template(inputParameters As String) As String
         If String.IsNullOrWhiteSpace(inputParameters) Then Throw New Exception("no field parameter input")
-        If inputParameters.Split(" ").Count <= 2 Then Throw New Exception("template of form name missing")
+        If inputParameters.Split(" ").Count < 2 Then Throw New Exception("template or form name missing")
+        If inputParameters.Split(" ").Count = 2 Then Throw New Exception("no field parameters specified")
 
         CheckTypes(FieldParameters(inputParameters))
         CheckSize(FieldParameters(inputParameters))
@@ -18,7 +19,7 @@
     ''' <summary>
     ''' Obtain list of field parameters
     ''' </summary>
-    Private Function FieldParameters(ByVal usersParameters As String) As List(Of String)
+    Private Shared Function FieldParameters(ByVal usersParameters As String) As List(Of String)
         Dim listOfFieldParameters = usersParameters.Split(" ").ToList
         listOfFieldParameters.RemoveRange(0, 2)
 
@@ -28,7 +29,7 @@
     ''' <summary>
     ''' Check field parameter contains valid field type
     ''' </summary>
-    Private Sub CheckTypes(ByVal parameters As List(Of String))
+    Private Shared Sub CheckTypes(ByVal parameters As List(Of String))
         If parameters.Any(Function(parameter) (parameter.Contains(":")) = False) Then Throw New Exception("field parameter requires a field name as well as a field type seperated with a :")
 
         If parameters.Any(Function(parameter) (parameter.ToLower.Contains("varchar") _
@@ -40,7 +41,7 @@
     ''' Check field parameter contains a valid size if it's specified
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub CheckSize(ByVal parameters As List(Of String))
+    Private Shared Sub CheckSize(ByVal parameters As List(Of String))
         parameters.ForEach(Sub(parameter)
 
                                If parameter.Contains("(") = True And parameter.Contains(")") = True Then
