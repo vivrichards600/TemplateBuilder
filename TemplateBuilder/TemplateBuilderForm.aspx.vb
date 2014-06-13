@@ -18,7 +18,7 @@ Public Class TemplateBuilderForm
         Dim err As New CustomValidator
         err.ValidationGroup = "TemplateBuilderFormValidation"
         err.IsValid = False
-        err.ErrorMessage = errorMessage
+        err.ErrorMessage = "<h4>Please correct the following errors</h4>" & errorMessage
         ValidationSummary.Controls.Add(err)
     End Sub
 

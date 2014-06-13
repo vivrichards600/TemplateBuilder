@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class TemplateBuilderForm
 
     '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
     '''ValidationSummary control.
     '''</summary>
     '''<remarks>
@@ -41,15 +32,6 @@ Partial Public Class TemplateBuilderForm
     Protected WithEvents InputParametersTextBox As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''GenerateTemplateButton control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents GenerateTemplateButton As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''InputParametersRequiredFieldValidator control.
     '''</summary>
     '''<remarks>
@@ -57,6 +39,15 @@ Partial Public Class TemplateBuilderForm
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents InputParametersRequiredFieldValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''GenerateTemplateButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GenerateTemplateButton As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''GeneratedOutputTextBox control.
