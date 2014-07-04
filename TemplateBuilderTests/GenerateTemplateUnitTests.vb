@@ -66,13 +66,6 @@ Public Class GenerateTemplateUnitTests
         Generate = New Generate
     End Sub
 
-    Dim NO_PARAMETERS = String.Empty
-    Dim FORM_TEMPLATE_PARAMETER = "TemplateName"
-    Dim FORM_NAME_PARAMETER = " FormName"
-    Dim FORM_FIELD_INVALID_PARAMETER = " Field:Type"
-    Dim INPUT_PARAMETERS = "TemplateName FormName Field1:VaRcHar Field2:InT Field3:DatE"
-    Dim INVALID_INPUT_PARAMETERS = "TemplateName FormName Field1:SomeInvalidType"
-    Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
-    Dim GENERATED_OUTPUT As String = String.Empty
+   
 
 End Class
