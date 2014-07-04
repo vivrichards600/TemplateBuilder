@@ -7,7 +7,7 @@
     ''' <remarks>EXAMPLE USAGE: TemplateName FormName Field1:Varchar Field2:Int Field3:Date</remarks>
     Public Shared Function Template(inputParameters As String) As String
         If String.IsNullOrWhiteSpace(inputParameters) Then Throw New Exception("No field parameter input")
-        If inputParameters.Split(" ").Count < 2 Then Throw New Exception("Template or form name missing")cirejiroeiojfiojrefiojerf
+        If inputParameters.Split(" ").Count < 2 Then Throw New Exception("Template or form name missing")
         If inputParameters.Split(" ").Count = 2 Then Throw New Exception("No field parameters specified")
 
         CheckTypes(FieldParameters(inputParameters))
