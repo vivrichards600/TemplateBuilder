@@ -9,7 +9,6 @@
         If String.IsNullOrWhiteSpace(inputParameters) Then Throw New Exception("No field parameter input")
         If inputParameters.Split(" ").Count < 2 Then Throw New Exception("Template or form name missing")
         If inputParameters.Split(" ").Count = 2 Then Throw New Exception("No field parameters specified")
-
         CheckTypes(FieldParameters(inputParameters))
         CheckSize(FieldParameters(inputParameters))
 
@@ -22,7 +21,7 @@
     Private Shared Function FieldParameters(ByVal usersParameters As String) As List(Of String)
         Dim listOfFieldParameters = usersParameters.Split(" ").ToList
         listOfFieldParameters.RemoveRange(0, 2)
-
+        
         Return listOfFieldParameters
     End Function
 
@@ -43,7 +42,6 @@
     ''' <remarks></remarks>
     Private Shared Sub CheckSize(ByVal parameters As List(Of String))
         parameters.ForEach(Sub(parameter)
-
                                If parameter.Contains("(") = True And parameter.Contains(")") = True Then
                                    parameter = parameter.Replace("(", "")
                                    parameter = parameter.Replace(")", "")
