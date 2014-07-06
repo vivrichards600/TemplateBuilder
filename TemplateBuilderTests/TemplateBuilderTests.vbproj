@@ -84,6 +84,20 @@
       <Name>TemplateBuilder</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\TemplateBuilder.dll" />
+    <Content Include="bin\Debug\TemplateBuilder.pdb" />
+    <Content Include="bin\Debug\TemplateBuilder.xml" />
+    <Content Include="bin\Debug\TemplateBuilderTests.dll" />
+    <Content Include="bin\Debug\TemplateBuilderTests.pdb" />
+    <Content Include="bin\Debug\TemplateBuilderTests.xml" />
+    <Content Include="bin\Release\TemplateBuilder.dll" />
+    <Content Include="bin\Release\TemplateBuilder.pdb" />
+    <Content Include="bin\Release\TemplateBuilder.xml" />
+    <Content Include="bin\Release\TemplateBuilderTests.dll" />
+    <Content Include="bin\Release\TemplateBuilderTests.pdb" />
+    <Content Include="bin\Release\TemplateBuilderTests.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

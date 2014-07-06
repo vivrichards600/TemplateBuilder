@@ -87,6 +87,9 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\TemplateBuilder.dll" />
+    <Content Include="bin\TemplateBuilder.pdb" />
+    <Content Include="bin\TemplateBuilder.xml" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
