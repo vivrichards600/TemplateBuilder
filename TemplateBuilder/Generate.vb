@@ -58,5 +58,4 @@
                                If parameter.Contains("(") = False And parameter.Contains(")") = True Then Throw New Exception("Found a closing bracket for field size but no opening bracket")
                            End Sub)
     End Sub
-
 End Class
