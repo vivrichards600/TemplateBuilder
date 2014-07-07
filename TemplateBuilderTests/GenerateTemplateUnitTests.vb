@@ -52,6 +52,7 @@ Public Class GenerateTemplateUnitTests
         Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar()")
     End Sub
 
+    <TestMethod()>
     Public Sub Generate_HTML_Template_Code_When_Parameters_Input()
         GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
 
