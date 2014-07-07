@@ -52,7 +52,6 @@ Public Class GenerateTemplateUnitTests
         Generate.Template(FORM_TEMPLATE_PARAMETER + FORM_NAME_PARAMETER + "Field1:Varchar()")
     End Sub
 
-    <TestMethod()>
     Public Sub Generate_HTML_Template_Code_When_Parameters_Input()
         GENERATED_OUTPUT = Generate.Template(INPUT_PARAMETERS)
 
@@ -70,7 +69,7 @@ Public Class GenerateTemplateUnitTests
     Dim FORM_TEMPLATE_PARAMETER = "TemplateName"
     Dim FORM_NAME_PARAMETER = " FormName"
     Dim FORM_FIELD_INVALID_PARAMETER = " Field:Type"
-    Dim INPUT_PARAMETERS = "TemplateName FormName Field1:VaRcHar Field2:InT Field3:DatE"
+    Dim INPUT_PARAMETERS = "TemplateName FormName fIRSTnAME:varchar(200)"
     Dim INVALID_INPUT_PARAMETERS = "TemplateName FormName Field1:SomeInvalidType"
     Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
     Dim GENERATED_OUTPUT As String = String.Empty
