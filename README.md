@@ -3,7 +3,7 @@ TemplateBuilder.Net
 
 Test Driven Development (TDD) of a VB.Net Web Forms Application which is able to generate an Accessible HTML5 VB.Net Web Form, it's VB Code, Unit Tests, Integration Tests (using Selenium Web Driver) and SQL Scripts for creating the table to hold the Web Forms data as well as stored procedures to do the insertions, select a customer and delete a customer etc.
 
-## Example Usage
+Example Usage
 ------
 
 To use this application the user would need to input the following in the web form:
