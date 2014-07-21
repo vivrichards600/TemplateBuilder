@@ -70,4 +70,17 @@ Public Class TemplateBuilderFormIntegrationSpec
         'Assert
         Assert.IsTrue(WebBrowser.PageSource.Contains("Input parameters are mandatory and must contain i.e ProjectName TemplateName Field:Type(OptionalSize)"))
     End Sub
+
+    <TestMethod()> _
+    Public Sub Page_Displays_Error_When_No_Field_Parameters_Input_And_Generate_Template_Button_Clicked()
+        'Arrange
+        WebBrowser.Navigate.GoToUrl("http://localhost:52095/TemplateBuilderForm.aspx")
+        WebBrowser.FindElement(By.Id("InputParametersTextBox")).SendKeys("abc def")
+
+        'Act
+        WebBrowser.FindElement(By.Id("GenerateTemplateButton")).Click()
+
+        'Assert
+        Assert.IsTrue(WebBrowser.PageSource.Contains("No field parameters specified"))
+    End Sub
 End Class
