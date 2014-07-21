@@ -17,6 +17,9 @@
               <Regular>
                 <CodeCoverageItem binaryFile="TemplateBuilderTests\bin\Debug\TemplateBuilderTests.dll" pdbFile="TemplateBuilderTests\bin\Debug\TemplateBuilderTests.pdb" instrumentInPlace="true" />
               </Regular>
+              <AspNet>
+                <AspNetCodeCoverageItem id="b79d7cc9-4ddd-4f8f-8256-8a82c4c4dee0" name="TemplateBuilder" applicationRoot="/" url="http://localhost:0/TemplateBuilderForm.aspx" />
+              </AspNet>
             </CodeCoverage>
           </Configuration>
         </DataCollector>
