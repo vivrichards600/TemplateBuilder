@@ -13,7 +13,8 @@
         CheckTypes(FieldParameters(inputParameters))
         CheckSize(FieldParameters(inputParameters))
 
-        Return "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
+        Return String.Format("<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""{0}.aspx.vb"" Inherits=""{1}.{0}"" %>", inputParameters.Split(" ")(0), inputParameters.Split(" ")(1))
+
       End Function
 
     ''' <summary>

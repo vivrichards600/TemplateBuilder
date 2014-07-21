@@ -59,6 +59,14 @@ Public Class GenerateTemplateUnitTests
         Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
     End Sub
 
+
+    <TestMethod()>
+    Public Sub Generate_HTML_Template_Code_Opening_Tag_Must_Contain_Input_Project_And_Form_Name()
+        GENERATED_OUTPUT = Generate.Template("PayAward DisplayPayAward StaffName:Varchar(200)")
+
+        Assert.AreEqual("<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""PayAward.aspx.vb"" Inherits=""DisplayPayAward.PayAward"" %>", GENERATED_OUTPUT)
+    End Sub
+
     Public Shared Generate As Generate
 
     <TestInitialize()>
@@ -67,12 +75,12 @@ Public Class GenerateTemplateUnitTests
     End Sub
 
     Dim NO_PARAMETERS = String.Empty
-    Dim FORM_TEMPLATE_PARAMETER = "TemplateName"
+    Dim FORM_TEMPLATE_PARAMETER = "ProjectName"
     Dim FORM_NAME_PARAMETER = " FormName"
     Dim FORM_FIELD_INVALID_PARAMETER = " Field:Type"
-    Dim INPUT_PARAMETERS = "TemplateName FormName fIRSTnAME:varchar(200)"
-    Dim INVALID_INPUT_PARAMETERS = "TemplateName FormName Field1:SomeInvalidType"
-    Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.TemplateName"" %>"
+    Dim INPUT_PARAMETERS = "ProjectName FormName fIRSTnAME:varchar(200)"
+    Dim INVALID_INPUT_PARAMETERS = "ProjectName FormName Field1:SomeInvalidType"
+    Dim EXPECTED_GENERATED_OUTPUT = "<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""ProjectName.aspx.vb"" Inherits=""FormName.ProjectName"" %>"
     Dim GENERATED_OUTPUT As String = String.Empty
 
 End Class
