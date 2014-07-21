@@ -59,9 +59,8 @@ Public Class GenerateTemplateUnitTests
         Assert.AreEqual(EXPECTED_GENERATED_OUTPUT, GENERATED_OUTPUT)
     End Sub
 
-
     <TestMethod()>
-    Public Sub Generate_HTML_Template_Code_Opening_Tag_Must_Contain_Input_Project_And_Form_Name()
+    Public Sub Input_Project_And_Form_Name_Parameters_Should_Be_Included_In_Generated_HTML_Template_Code_Opening_Tag()
         GENERATED_OUTPUT = Generate.Template("PayAward DisplayPayAward StaffName:Varchar(200)")
 
         Assert.AreEqual("<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""PayAward.aspx.vb"" Inherits=""DisplayPayAward.PayAward"" %>", GENERATED_OUTPUT)
