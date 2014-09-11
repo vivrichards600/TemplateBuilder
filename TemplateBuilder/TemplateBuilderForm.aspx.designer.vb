@@ -41,6 +41,15 @@ Partial Public Class TemplateBuilderForm
     Protected WithEvents InputParametersRequiredFieldValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
+    '''GeneratedOutputTextBox control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GeneratedOutputTextBox As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''GenerateTemplateButton control.
     '''</summary>
     '''<remarks>
@@ -50,11 +59,20 @@ Partial Public Class TemplateBuilderForm
     Protected WithEvents GenerateTemplateButton As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''GeneratedOutputTextBox control.
+    '''TextBox2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents GeneratedOutputTextBox As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''TextBox1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
 End Class

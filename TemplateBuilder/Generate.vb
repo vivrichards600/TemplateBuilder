@@ -13,7 +13,7 @@
         CheckTypes(FieldParameters(inputParameters))
         CheckSize(FieldParameters(inputParameters))
 
-        Return String.Format("<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""{0}.aspx.vb"" Inherits=""{1}.{0}"" %>", inputParameters.Split(" ")(0), inputParameters.Split(" ")(1))
+        Return String.Format("<%@ Page Language=""vb"" AutoEventWireup=""false"" CodeBehind=""{0}.aspx.vb"" Inherits=""{1}.{0}"" %>{2}<!DOCTYPE html>{2}<html>{2}<head>{2}<title>{1}</title>{2}</head>{2}<body>{2}</body>{2}</html>", inputParameters.Split(" ")(0), inputParameters.Split(" ")(1), vbCrLf)
 
       End Function
 

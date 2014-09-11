@@ -56,11 +56,11 @@
         <div class="form-group">
             <label for="GeneratedOutputTextBox">
                 Generated template</label>
-            <asp:TextBox ID="GeneratedOutputTextBox" runat="server" class="form-control" placeholder="Generated code"></asp:TextBox>
+            <asp:TextBox ID="GeneratedOutputTextBox" runat="server" class="form-control" placeholder="Generated code" TextMode="MultiLine" Rows="4"></asp:TextBox>
         </div>
         <div class="btn-group">
             <asp:Button ID="GenerateTemplateButton" runat="server" Text="Generate Template" CssClass="btn btn-primary"
-                ValidationGroup="TemplateBuilderFormValidation" />
+                ValidationGroup="TemplateBuilderFormValidation"  />
         </div>
         </form>
     </div>
